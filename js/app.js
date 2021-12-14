@@ -160,7 +160,7 @@ buttonResult.addEventListener("click", () => {
         resultDiv.style.color = "green";
     }
     else if (result < 0) {
-        resultDiv.innerHTML = "Votre solde est en négatif";
+        resultDiv.innerHTML = "Votre solde est en négatif ";
         //style
         resultDiv.style.color = "red";
     }
