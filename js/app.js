@@ -18,7 +18,6 @@ class Budget {
         title1.innerHTML = name;
         //Style
         title1.style.textAlign = "center";
-        title1.style.fontSize = "3rem";
         title1.style.padding = "1.2rem";
     }
 
@@ -27,6 +26,7 @@ class Budget {
         elements.appendChild(label);
         label.innerHTML = item;
         let user_data = document.createElement("input");
+        user_data.id = "user";
         user_data.className = className;
         user_data.value = "0";
         user_data.type = "number";
