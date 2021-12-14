@@ -7,6 +7,7 @@ const income = document.getElementById("income");
 const outlay = document.getElementById("outlay");
 const saving = document.getElementById("saving");
 const resultDiv = document.getElementById("result");
+const foot = document.getElementById("foot");
 
 class Budget {
 
@@ -118,8 +119,9 @@ for (let i = 0 ; i < arraySaving[1].length; i++) {   //in the array elements
 //create button result and add value
 let buttonResult = document.createElement("button");
 buttonResult.style.fontSize = "2rem";
-resultDiv.appendChild(buttonResult);
 buttonResult.innerHTML = "Total";
+resultDiv.appendChild(buttonResult);
+
 buttonResult.addEventListener("click", () => {
     const allIncomeInput = document.getElementsByClassName("income");
 
@@ -168,7 +170,16 @@ buttonResult.addEventListener("click", () => {
 })
 const container = document.getElementById("container").getElementsByTagName("input");
 let reset = document.createElement("button");
-resultDiv.appendChild(reset);
+foot.appendChild(reset);
+reset.style.fontSize = "2rem";
 reset.innerHTML = "Reset";
+reset.addEventListener("click", () => {
+    for (let input of container) {
+        input.value = "";
+        location.reload();
+    }
+})
+
+
 
 
